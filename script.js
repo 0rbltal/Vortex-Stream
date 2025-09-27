@@ -16,7 +16,7 @@ async function searchMovie() {
       const data = await response.json();
       if (data.results && data.results.length > 0) {
         const movieId = data.results[0].id;
-        const embedUrl = `https://vidsrc.icu/embedv2/movie/{id}`;
+        const embedUrl = `https://vidsrc.icu/embedv2/movie/<tmdbID>`;
         displayResult(embedUrl);
       } else {
         document.getElementById("results").innerHTML = "No results found.";
